@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.community{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(253, 253, 253);
+}
+
+.navbar{
+    padding: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: #0E0E0E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.right{
+    width: 100px;
+    display: flex;
+    margin-right: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    height: 30px;
+    width: 200px;
+    margin-left: 50px;
+}
+
+.logo h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.logo h1 span{
+    color: #69FA8C;
+}
+
+.fas{
+    color: #69FA8C;
+}
+
+.user-pic-container{
+    width: 40px;
+    height: 40px;
+    background-color: bisque;
+    border-radius: 50%;
+    background-image: url(userpic.png);
+    background-size: cover;
+    border: 1px solid #69FA8C;
+}
+
+.dropbtn {
+    background-color: transparent;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown a:hover {
+    background-color: #ddd;
+}
+  
+.show {
+    display: block;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+
+.add{
+    width: 80px;
+    height: 80px;
+    background-color: #69FA8C;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 17%;
+    left: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: max-content;
+    height: 70px;
+}
+
+.username{
+    font-size: 12px;
+    opacity: 0.7;
+}

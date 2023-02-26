@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/covid.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <title>Community</title>
+</head>
+<body>
+    <section class="community">
+        <div class="navbar">
+            <div class="logo">
+                <h1>MED<span class="logo-span">JN</span></h1>
+            </div>
+            <div class="right">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><i class="fas fa-caret-down"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#">Hello,<br><span class="username"><%= userName %></span></a>
+                      <a href="/upload">Upload Prescrioption</a>
+                      <a href="/">Logout</a>
+                    </div>
+                  </div>
+                <div class="user-pic-container"></div>
+            </div>
+        </div>
+        <div class="main" id="main">
+          <button onclick="addComm()" class="add"><h2 class="plus">+</h2></button>
+          <br/> <br/><br/><br/><br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/<%= userName %>/feed" class="ani">Covid</a>
+      </div>
+        <form action="/<%= userName %>/bot" method="get">
+          <div class="main" id="main">
+            <button onclick="addComm()" class="add"><h2 class="plus">+</h2></button>
+          </div>
+        </form>
+        
+    </section>
+</body>
+<script>
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.fas')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</html>

@@ -1,0 +1,23 @@
+.forum-col {
+    min-width: 16em;
+  }
+.last-post-col {
+    min-width: 12em;
+}
+.logo{
+    height: max-content;
+    width: max-content;
+
+}
+
+.logo h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.logo h1 span{
+    color: #ffffff;
+}

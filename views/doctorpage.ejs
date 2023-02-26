@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Doctor Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0" />
+    <link rel="stylesheet" href="css/doctorpage.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form-title">Registration</h1>
+        <form action="/doctor-register" method="post">
+            <div class="main-user-info">
+                <div class="user-input-box">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required="required" name="fullName" placeholder="Enter Full Name" />
+                </div>
+                <div class="user-input-box">
+                    <label for="registration">Doctor's Registration No.</label>
+                    <input type="text" id="registration" required="required" name="registration" placeholder="Enter Registraion no." />
+                </div>
+                <div class="user-input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required="required" name="email" placeholder="Enter Email" />
+                </div>
+                <div class="user-input-box">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber"  name="phoneNumber" placeholder="Enter Phone Number" />
+                </div>
+                <div class="user-input-box">
+                    <label for="password">Date of Birth</label>
+                    <input type="date" id="dateofbirth" required="required" name="date" placeholder="Enter Date of Birth" />
+                </div>
+                <div class="user-input-box">
+                    <label for="confirmPassword">Password</label>
+                    <input type="password" id="Password" required="required" name="Password" placeholder="Password" />
+                </div>
+            </div>
+            <div class="gender-details-box">
+                <span class="gender-title">Gender</span>
+                <div class="gender-category">
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value = "Female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value = "Others">
+                    <label for="other">Other</label>
+                </div>
+                <div class="question">
+                    <a href="/patient-register">Are you a Patient? Click here</a>
+                    <a href="/login">Already a member? Login</a>
+                </div>
+            </div>
+            <div class="form-submit-btn">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

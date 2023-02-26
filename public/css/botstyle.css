@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/** Basic Reset **/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  margin: 0;
+  background: url(botpic.webp);
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/** Styles **/
+body {
+  background-color: gray;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 1.4rem;
+  display: flex;
+  width: 60rem;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.form-img {
+  width: 55%;
+  background: url(robot.png);
+  background-size: cover;
+}
+
+.form-content {
+  width: 55%;
+  background-color: #fff;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+}
+.form-item input {
+  width: 70%;
+  padding: 0 15px;
+  border: 2px solid LightGray;
+}
+.form-item label {
+  align-self: center;
+  color: dimgray;
+}
+
+input {
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+}
+
+::-moz-placeholder {
+  color: dimgray;
+}
+
+:-ms-input-placeholder {
+  color: dimgray;
+}
+
+::placeholder {
+  color: dimgray;
+}
+
+input:not([type=submit]) {
+  background-color: whitesmoke;
+}
+
+input[type=submit] {
+  background-color: LightGreen;
+  color: white;
+}
+
+/** Buttons **/
+.form-buttons {
+  text-align: right;
+}
+.form-buttons input {
+  width: 32.5%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.form-buttons input[type=reset] {
+  margin-right: 5%;
+  color: dimgray;
+}
+
+/** Subscription & Gender **/
+.form-gender,
+.form-subs {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+input[type=radio] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+/** Gender **/
+.gender {
+  width: calc(100% / 3);
+  height: 60px;
+  position: relative;
+  text-align: center;
+}
+.gender span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gender span::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: normal;
+  font-weight: 900;
+  height: 40px;
+  width: 40px;
+  text-rendering: auto;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/** Subscription **/
+.form-subs label {
+  width: calc(100% / 3);
+  cursor: pointer;
+}
+.form-subs span {
+  display: inline-block;
+  width: 100%;
+  height: 53px;
+  text-align: center;
+  line-height: 53px;
+  border-radius: 6px;
+}
+.form-subs label:nth-child(1) {
+  color: #cd7f32;
+}
+.form-subs label:nth-child(1) input[type=radio]:checked + span {
+  background-color: #cd7f32;
+  border: 2px solid #7b4c1e;
+}
+.form-subs label:nth-child(2) {
+  color: #cd7f32;
+}
+.form-subs label:nth-child(2) input[type=radio]:checked + span {
+  background-color: #cd7f32;
+  border: 2px solid #7b4c1e;
+}
+
+.form-subs input[type=radio]:checked + span {
+  color: white;
+}

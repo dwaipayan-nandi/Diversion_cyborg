@@ -1,0 +1,166 @@
+body {
+  background: linear-gradient(to top right, #fc7279 30%, #ff7b9c 60%, #ffc019 125%);
+  height: 200%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4em;
+  color: #4D4D50;
+}
+
+/* Styles the div that holds the h1 and form */
+.main {
+    background: #FFF;
+    border-radius: 4px;
+    box-shadow: 6px 6px 10px 0px rgba(138,130,138,.5);
+    margin-left:25%;
+    margin-right:25%;
+    padding: 1em;
+}
+h1 {
+  margin: auto;
+  text-align: center;
+}
+form {
+  width: auto;
+  margin: 6%;
+}
+
+/* Remove default border */
+fieldset {
+  border: none;
+}
+
+/* BEGIN TEXT ENTRY STYLING */
+.floating-placeholder{
+  position:relative;
+}
+
+input, 
+.floating-placeholder{
+  line-height:2.4em;
+  height:2.6em;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
+.floating-placeholder input{
+  line-height:2.4em;
+}
+
+/* Transparent so we can see label under it */
+.floating-placeholder input{
+  position: absolute;
+  background: transparent;
+  font-size: 1.4em;
+  height: 1.5em;
+  border: none;
+  outline: none;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 2;
+  border-bottom: 1px solid #ccc;
+}
+
+.floating-placeholder label{
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 1.4em;
+  z-index: 1;
+  transform-origin: left;
+  transition: transform 160ms, color 200ms;
+  transform: scale(1,1) rotateY(0);
+  color: #4D4D50;
+}
+
+/* When an input is in focus, 
+style the color of the label for that field */
+.floating-placeholder input:focus+label{
+  color: #fc7279;
+}
+
+.floating-placeholder input:valid~label{
+  transform:scale(0.55,0.55) translateY(-1.55em);
+}
+
+.floating-placeholder input:valid{
+  line-height:2em;
+}
+/* END TEXT ENTRY STYLING */
+/* BEGIN RADIO BUTTON STYLING */
+.radio-btn {
+  height: 3em;
+  font-size: 1.2em;
+  margin: auto;
+  text-align: center;
+}
+
+.radio-btn input {
+  width: auto;
+  display: none;
+}
+
+.radio-btn input[type="radio"] + label {
+  font-weight: normal;
+  height: 2em;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.radio-btn span {
+  display: inline-block;
+  width: 30%;
+  margin-top: .8em;
+}
+
+/* When the input is checked, 
+style the color of its label */
+.radio-btn input[type="radio"]:checked + label {
+  color: #fc7279;
+}
+/* END RADIO BUTTON STYLING */
+/* BEGIN FILE UPLOAD STYLING */
+.file-container {
+  margin: auto;
+  text-align: center;
+}
+
+.file-container label {
+  background: transparent;
+  height: 1.5em;
+  width: 100%;
+  padding-top: .3em;
+  font-size: 1.2em;
+}
+
+input[type="file"]:valid ~ label{
+  background: #fc7279;
+  border-radius: 4px;
+  color: white;
+}
+/* Hide the default uploader while
+keeping it available for use */
+.file-container input[type="file"] {
+    opacity: 0;
+    height: 0;
+}
+
+.file-container:hover{
+  color: #fc7279;
+}
+/* END FILE UPLOAD STYLING */
+/* BEGIN SUBMIT BUTTON STYLING */
+/* Remove default button style */
+input[type=submit] {
+  background: transparent;
+  border: white;
+  font-size: 1.4em;
+  color: #4D4D50;
+}
+/* Change text color on hover, focus */
+input[type=submit]:hover,
+input[type=submit]:focus{
+    color: #fc7279;
+}
+/* END SUBMIT BUTTON STYLING */

@@ -22,6 +22,12 @@ app.use(cors()); // Allows incoming requests from any IP
 
 
 
+const accountSid = "AC56b3633b0c8014e56d4cf25a925ea04a";
+const authToken = "fd5ba02f8797529a468686fd552b3649";
+const client = require('twilio')(accountSid, authToken);
+
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
       callback(null, __dirname + '/uploads');
@@ -105,10 +111,17 @@ app.get("/upload",function(req,res){
 app.get("/compose", function(req, res){
   res.render("compose");
 })
+app.get("/notification",function(req, res){
+  client.messages
+      .create({
+         from: 'whatsapp:+14155238886',
+         body: 'Hi!\nThe Doctor is live on the community',
+         to: 'whatsapp:+918697596706'
+       })
+      .then(message => console.log(message.sid));
 
-
-
-
+      res.send("The notification has been sent to the users");
+})
 
 
 

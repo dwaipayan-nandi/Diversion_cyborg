@@ -23,7 +23,7 @@ app.use(cors()); // Allows incoming requests from any IP
 
 
 const accountSid = "AC56b3633b0c8014e56d4cf25a925ea04a";
-const authToken = "fd5ba02f8797529a468686fd552b3649";
+const authToken = "2d17ea2dba9b3fe589d5472b43d0cb2b";
 const client = require('twilio')(accountSid, authToken);
 
 
